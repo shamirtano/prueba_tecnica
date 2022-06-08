@@ -82,7 +82,6 @@ class EmpleadoController extends Controller
                 'areas' => Areas::all(),
                 'roles' => $this->getRolesEmpleado($id)
             ];
-            echo json_encode($data);
             return view('empleado.edit', $data);
         }else{
             return redirect()->route('empleado.index')->with('error', 'Empleado no encontrado');
